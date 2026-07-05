@@ -1,0 +1,70 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      reactions;
+}
+
+totalNumberOfReactions	3;
+
+//--------------------------------------------------------------
+reaction_1
+(
+        "Ionization"
+	"1 Ar + 1 electron = 1 Arp1 + 2 electron"
+        "eTemp"
+        "0.0"
+	"0.0"
+	"2.512e-18"
+);
+
+
+reaction_2
+(
+        "excitation"
+        "1 Ar + 1 electron = 1 Arm + 1 electron"
+        "eTemp"
+        "0.0"
+        "0.0"
+        "1.3856E-18"
+);
+
+reaction_3
+(
+        "excitedIonization"
+        "1 Arm + 1 electron = 1 Arp1 + 2 electron"
+        "eTemp"
+        "0.0"
+        "0.0"
+        "7.136e-19"
+);
+
+reaction_4
+(
+        "dimerFormation"
+        "2 Ar + 1 Arp1 = 1 Ar + 1 Ar2p"
+        "eTemp"
+        "0.0"
+        "0.0"
+        "0"
+);
+
+reaction_5
+(
+        "dimerRecombination"
+        "1 Ar2p + 1 electron = 1 Ar"
+        "eTemp"
+        "0.0"
+        "0.0"
+        "0"
+);
+// =============================================================================
