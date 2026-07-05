@@ -1,0 +1,212 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+libs (
+      "libfoam.so"
+      "liblduSolvers.so"
+     );
+
+application     icoFoam;
+
+startFrom       startTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+maxCo		0.5;
+
+deltaTMax	5e-14;
+
+deltaTMin	5e-14;
+
+endTime         20e-06;
+
+deltaT          5e-14;
+
+writeControl    runTime;
+
+writeInterval   1E-7;
+
+purgeWrite         500;
+
+writeFormat     ascii;
+
+writePrecision  15;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   15;
+
+runTimeModifiable true;
+
+functions{
+
+
+
+
+    fieldAverage1
+    {
+        type            fieldAverage;
+        functionObjectLibs ( "libfieldFunctionObjects.so" );
+        enabled         true;
+        cleanRestart        true;
+        outputControl   timeStep;
+        outputControl   outputTime;
+        //outputInterval  10000;
+        fields
+        (
+
+
+            jouleHeating
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+
+            eTemp
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+            electron
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+            Arp1
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+        
+
+
+            Flux_electron
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+
+            Flux_Arp1
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+ 	    }
+
+
+           electron
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+
+            Arp1
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+
+            powerDissipated
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }         
+
+          powerDissipatedElectron
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+          powerDissipatedIon
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+
+            power
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+
+
+            velocityelectron
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+            eCollisionFrequency
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+
+            EField
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+
+            EPotential
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+
+
+	);
+
+
+    }
+
+
+
+
+}
+
+// *************************************************************************
