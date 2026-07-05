@@ -1,0 +1,93 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      speciesAndReactions;
+}
+//*****************************************************************************
+backgroundGasDensity 1.234e+23;
+gasTemperature 800;
+cosmicRadiation 1e7;
+emSolver	semiImplicit;
+
+//************************ SPECIES LIST ***************************************
+speciesList
+(
+  electron
+  Arp1
+  Ar2p
+  Arm
+  Ar
+);
+
+//******************* SPECIES PROPERTIES ***************************************
+electron
+(
+	"9.1e-31"		  // tAr first number on this list will be tAr mass of tAr species
+	"-1"			    // tAr second number is tAr charge
+	"eTemp"			  // tAr third item on tAr list is tAr mobility model
+	"einstein"		    // tAr fourth item is tAr diffusion model
+	"9.8684e23"			  // value of mobility
+	"3.94737e24"			  // value of diffusion constant
+	"driftDiffusion"
+	"muBased"
+);
+
+//-------------------------------------------------------------------------------
+Arp1
+(
+	"6.6335209e-26"		// mass
+	"1"			      // charge
+	"EON"			    // mobility model
+	"einstein"		// diffusion model
+	"4.60526e21"			  // mobility
+	"1.315789e20"		  // Diffusion constant 		
+    	"momentum"
+	"muBased"
+);
+//-------------------------------------------------------------------------------
+Ar2p
+(
+        "1.3267042e-25"         // mass
+        "1"                           // charge 
+        "EON"                       // mobility model
+        "einstein"           // diffusion model
+        "1.1513158e+21"                   // mobility
+        "3.2894737e+19"           // Diffusion constant
+        "momentum"
+        "muBased"
+);
+//------------------------------------------------------------------------------
+Arm
+(
+	"6.6335209e-26"		// mass
+	"0"			      // charge
+	"constant"		// mobility model
+	"constant"		// diffusion model
+	"0"			      // mobility (since it is chargeless)
+	"1.31578e20"			// Diffusion constant 			
+        "driftDiffusion"
+	"muBased"
+);
+//------------------------------------------------------------------------------
+Ar
+(
+	"6.6335209e-26"		// mass
+	"0"			      // charge
+	"constant"		// mobility model
+	"constant"		// diffusion model
+	"0"			      // mobility (since it is chargeless)
+	"1.1880952e+20"			// Diffusion constant 			
+	"none"
+	"muBased"
+);
+//------------------------------------------------------------------------------

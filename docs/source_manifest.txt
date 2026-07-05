@@ -1,0 +1,10 @@
+Primary solver source copied from:
+/home/sgautam3/latest2025PlasmaFoam/latestPlasmaFoam_2024Paper
+
+Installed binary observed at:
+/home/sgautam3/foam/foam-extend-4.1/applications/bin/linux64GccDPInt32Opt/plasmaFoam2
+
+Clean case templates copied from:
+/data/sgautam3/2025/pressureVariation/revision2/baseline
+/data/sgautam3/2025/pressureVariation/revision2_IMFM_54cases_dt1e-13_nCycles5_20us/regimeGrid
+/data/sgautam3/2025/pressureVariation/revision2_IMFM_54cases_dt2e-13_nCycles10_20us/regimeGrid

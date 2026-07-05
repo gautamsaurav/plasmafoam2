@@ -1,0 +1,11 @@
+EXE_INC = \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(WM_PROJECT_DIR)/src/meshTools/lnInclude \
+    -I$(WM_PROJECT_DIR)/src/meshTools/directMapped/directMappedPolyPatch\
+
+EXE_LIBS = \
+        -lcoupledLduMatrix \
+        -lfiniteVolume \
+        -lmeshTools \
+        -lfoam \
+        -ldl \
