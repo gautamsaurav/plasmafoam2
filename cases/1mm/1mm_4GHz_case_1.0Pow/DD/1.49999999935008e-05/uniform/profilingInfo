@@ -1,0 +1,202 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.1                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       regIOobject;
+    location    "1.49999999935008e-05/uniform";
+    object      profilingInfo;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+profilingInfo
+(
+
+    {
+        id              18;
+        parentId        16;
+        description     "Foam::Time::writeObject - outputTime";
+        calls           861034;
+        totalTime       49125.8020450017;
+        childTime       0;
+        onStack         1;
+    }
+
+    {
+        id              16;
+        parentId        1;
+        description     "Foam::Time::writeObject";
+        calls           14000000;
+        totalTime       49132.8802449624;
+        childTime       49125.8020450017;
+        onStack         1;
+    }
+
+    {
+        id              1;
+        description     "application::main";
+        calls           1;
+        totalTime       98410.802507;
+        childTime       75321.3404527175;
+        onStack         1;
+    }
+
+    {
+        id              17;
+        parentId        1;
+        description     "FO::fieldAverage1::execute";
+        calls           13999999;
+        totalTime       21901.5293498006;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              5;
+        parentId        4;
+        description     "FO::fieldAverage1::start";
+        calls           1;
+        totalTime       0.001534;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              4;
+        parentId        1;
+        description     "functionObjectList::read";
+        calls           3;
+        totalTime       0.006176;
+        childTime       0.001534;
+        onStack         0;
+    }
+
+    {
+        id              10;
+        parentId        1;
+        description     "fvMatrix::solve_Ar2p";
+        calls           14000000;
+        totalTime       686.218482910772;
+        childTime       418.987135944157;
+        onStack         0;
+    }
+
+    {
+        id              12;
+        parentId        1;
+        description     "fvMatrix::solve_Arm";
+        calls           14000000;
+        totalTime       687.717649908281;
+        childTime       419.258558943742;
+        onStack         0;
+    }
+
+    {
+        id              8;
+        parentId        1;
+        description     "fvMatrix::solve_Arp1";
+        calls           14000000;
+        totalTime       696.703449896207;
+        childTime       421.183237943319;
+        onStack         0;
+    }
+
+    {
+        id              2;
+        parentId        1;
+        description     "fvMatrix::solve_EPotential";
+        calls           14000001;
+        totalTime       764.320522842513;
+        childTime       439.707975920253;
+        onStack         0;
+    }
+
+    {
+        id              14;
+        parentId        1;
+        description     "fvMatrix::solve_eTemp";
+        calls           14000000;
+        totalTime       713.065475884184;
+        childTime       425.105058939571;
+        onStack         0;
+    }
+
+    {
+        id              6;
+        parentId        1;
+        description     "fvMatrix::solve_electron";
+        calls           14000000;
+        totalTime       738.899051870666;
+        childTime       429.382511935324;
+        onStack         0;
+    }
+
+    {
+        id              11;
+        parentId        10;
+        description     "lduMatrix::solver_Ar2p";
+        calls           14000000;
+        totalTime       418.987135944157;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              13;
+        parentId        12;
+        description     "lduMatrix::solver_Arm";
+        calls           14000000;
+        totalTime       419.258558943742;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              9;
+        parentId        8;
+        description     "lduMatrix::solver_Arp1";
+        calls           14000000;
+        totalTime       421.183237943319;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              3;
+        parentId        2;
+        description     "lduMatrix::solver_EPotential";
+        calls           14000001;
+        totalTime       439.707975920253;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              15;
+        parentId        14;
+        description     "lduMatrix::solver_eTemp";
+        calls           14000000;
+        totalTime       425.105058939571;
+        childTime       0;
+        onStack         0;
+    }
+
+    {
+        id              7;
+        parentId        6;
+        description     "lduMatrix::solver_electron";
+        calls           14000000;
+        totalTime       429.382511935324;
+        childTime       0;
+        onStack         0;
+    }
+);
+
+
+// ************************************************************************* //
