@@ -1,0 +1,103 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.1                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "1.49999999935008e-05/uniform";
+    object      fieldAveragingProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+jouleHeating
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+eTemp
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+electron
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+Arp1
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+Flux_electron
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+Flux_Arp1
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+powerDissipated
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+powerDissipatedElectron
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+powerDissipatedIon
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+power
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+velocityelectron
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+eCollisionFrequency
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+EField
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+EPotential
+{
+    totalIter       3289351;
+    totalTime       1.6446754998896e-06;
+}
+
+
+// ************************************************************************* //
