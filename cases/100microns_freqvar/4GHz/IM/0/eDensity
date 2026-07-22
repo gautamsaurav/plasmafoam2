@@ -1,0 +1,39 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | foam-extend: Open Source CFD                    |
+|  \\    /   O peration     | Version:     4.0                                |
+|   \\  /    A nd           | Web:         http://www.foam-extend.org         |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      eDensity;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 -1 -2 0 0 0 0];
+
+internalField   uniform 1e-20;
+
+boundaryField
+{
+    ground
+    {
+        type            energyDensity_wilsonBC5;//zeroGradient;//driftDiffusionElectronEnergy;
+	seec		0.0;
+	Tse		22000;
+    }
+    electrode
+    {
+        type            energyDensity_wilsonBC5;//zeroGradient;//driftDiffusionElectronEnergy;
+        seec            0.0;
+        Tse             22000;
+    }
+}
+
+
+// ************************************************************************* //
